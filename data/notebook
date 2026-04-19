@@ -1,0 +1,171 @@
+# notebooks/evaluation.ipynb
+# Create a new Jupyter Notebook file named:
+# evaluation.ipynb
+# Then paste each section into notebook cells.
+
+# ======================================================
+# CELL 1 — Imports
+# ======================================================
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+
+plt.style.use("default")
+
+# ======================================================
+# CELL 2 — Load Dataset
+# ======================================================
+
+df = pd.read_csv("../data/sample_telemetry.csv")
+df.head()
+
+# ======================================================
+# CELL 3 — Dataset Info
+# ======================================================
+
+print("Rows:", len(df))
+print("Columns:", len(df.columns))
+df.info()
+
+# ======================================================
+# CELL 4 — ADSI Trend
+# ======================================================
+
+plt.figure(figsize=(12,6))
+plt.plot(df["timestamp"], df["adsi"], linewidth=3)
+plt.title("AI Deployment Stability Index Over Time", fontsize=16)
+plt.xlabel("Timestamp")
+plt.ylabel("ADSI Score")
+plt.grid(True, alpha=0.3)
+plt.tight_layout()
+plt.show()
+
+# ======================================================
+# CELL 5 — Tier Distribution
+# ======================================================
+
+df["tier"].value_counts().plot(
+    kind="bar",
+    figsize=(10,5)
+)
+
+plt.title("Operational Tier Distribution", fontsize=16)
+plt.xlabel("Tier")
+plt.ylabel("Count")
+plt.tight_layout()
+plt.show()
+
+# ======================================================
+# CELL 6 — Latency vs ADSI
+# ======================================================
+
+plt.figure(figsize=(12,6))
+plt.scatter(df["latency_ms"], df["adsi"], alpha=0.8)
+plt.title("Latency vs ADSI", fontsize=16)
+plt.xlabel("Latency (ms)")
+plt.ylabel("ADSI")
+plt.grid(True, alpha=0.3)
+plt.tight_layout()
+plt.show()
+
+# ======================================================
+# CELL 7 — Correlation Matrix
+# ======================================================
+
+corr = df[
+    [
+        "ahi",
+        "ihi",
+        "dhi",
+        "adsi",
+        "latency_ms",
+        "retrieval_score",
+        "kpi_error",
+        "embedding_shift"
+    ]
+].corr()
+
+corr
+
+# ======================================================
+# CELL 8 — Heatmap (No seaborn)
+# ======================================================
+
+plt.figure(figsize=(10,8))
+plt.imshow(corr, interpolation="nearest")
+plt.colorbar()
+plt.xticks(range(len(corr.columns)), corr.columns, rotation=45, ha="right")
+plt.yticks(range(len(corr.columns)), corr.columns)
+plt.title("Feature Correlation Matrix", fontsize=16)
+plt.tight_layout()
+plt.show()
+
+# ======================================================
+# CELL 9 — Stability Tier Transition Points
+# ======================================================
+
+critical = df[df["tier"] == "Critical"]
+warning = df[df["tier"] == "Warning"]
+degrading = df[df["tier"] == "Degrading"]
+
+plt.figure(figsize=(12,6))
+
+plt.plot(df["timestamp"], df["adsi"], linewidth=2)
+
+plt.scatter(
+    warning["timestamp"],
+    warning["adsi"],
+    s=60,
+    label="Warning"
+)
+
+plt.scatter(
+    degrading["timestamp"],
+    degrading["adsi"],
+    s=60,
+    label="Degrading"
+)
+
+plt.scatter(
+    critical["timestamp"],
+    critical["adsi"],
+    s=60,
+    label="Critical"
+)
+
+plt.title("Tier Transition Visualization", fontsize=16)
+plt.xlabel("Timestamp")
+plt.ylabel("ADSI")
+plt.legend()
+plt.grid(True, alpha=0.3)
+plt.tight_layout()
+plt.show()
+
+# ======================================================
+# CELL 10 — Summary Metrics
+# ======================================================
+
+print("Mean ADSI:", round(df["adsi"].mean(),3))
+print("Minimum ADSI:", round(df["adsi"].min(),3))
+print("Maximum ADSI:", round(df["adsi"].max(),3))
+print("Average Latency:", round(df["latency_ms"].mean(),1), "ms")
+
+# ======================================================
+# CELL 11 — Save Publication Figures
+# ======================================================
+
+plt.figure(figsize=(12,6))
+plt.plot(df["timestamp"], df["adsi"], linewidth=3)
+plt.title("ADSI Stability Curve")
+plt.xlabel("Timestamp")
+plt.ylabel("ADSI")
+plt.tight_layout()
+plt.savefig("../assets/adsi_graph.png", dpi=300)
+plt.show()
+
+# ======================================================
+# CELL 12 — Final Statement
+# ======================================================
+
+print("AI-OS evaluation notebook completed successfully.")
