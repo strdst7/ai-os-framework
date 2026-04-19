@@ -1,55 +1,148 @@
+<div align="center">
+
 # AI-OS Framework
+
 ## From Observability to Survivability
-A research-grade open-source framework for measuring, governing, and improving deployment stability in enterprise AI systems.
-AI-OS Framework transforms fragmented monitoring signals into a bounded composite score called the:
-# AI Deployment Stability Index (ADSI)
-This enables organizations to detect degradation earlier, reduce operational risk, and build survivability-focused AI infrastructure.
----
+
+### A Research-Grade Framework for Enterprise AI Stability Governance
+
+<p align="center">
+
 <img width="1536" height="1024" alt="hero" src="https://github.com/user-attachments/assets/4e2c3d96-38d7-44e9-b3fc-14fa28a97dd7" />
 
+</p>
+
+
+![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11-blue)
+
+![License](https://img.shields.io/badge/license-MIT-black)
+
+![Status](https://img.shields.io/badge/status-active-success)
+
+![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen)
+
+
+### AI Deployment Stability Index (ADSI) • Multi-Agent Governance • Production Reliability
+
+
+[Quick Start](#quick-start) •
+
+[Architecture](#architecture) •
+
+[Results](#results) •
+
+[Roadmap](#roadmap) •
+
+[Paper](PAPER.md)
+
+</div>
 
 ---
-# Why AI-OS Framework Exists
-Modern AI systems rarely fail instantly.
-They degrade silently through:
+
+# Why This Project Exists
+
+Most AI systems fail gradually — not instantly.
+
+They degrade through:
+
 - rising latency  
+
 - retrieval quality decay  
-- KPI misalignment  
+
 - hallucination drift  
-- infrastructure volatility  
+
+- KPI misalignment  
+
+- infrastructure instability  
+
 - compounding weak signals  
-Traditional observability tools show metrics.
-They often fail to answer:
+
+Traditional dashboards expose metrics but often fail to answer:
+
 > Is the AI deployment still stable?
-AI-OS Framework was created to answer that question.
+
+AI-OS Framework was built to solve that problem.
+
 ---
-# Core Features
-## Stability Modeling
-Unified deployment health scoring using ADSI.
-## Governance Tiers
-Convert raw metrics into clear operational states:
-- Stable  
-- Warning  
-- Degrading  
-- Critical  
-## Multi-Signal Monitoring
-Combines:
-- alignment health  
-- retrieval quality  
-- drift resilience  
-- performance stability  
-## Enterprise Architecture
-Built for production thinking:
-- modular design  
-- testing  
-- documentation  
-- maintainability  
-## Research Assets Included
-- publication paper  
-- methodology  
-- assumptions  
-- evaluation notebooks  
-- charts and visuals  
+
+# What AI-OS Does
+
+AI-OS converts fragmented operational telemetry into a bounded survivability score:
+
+# AI Deployment Stability Index (ADSI)
+
+This enables:
+
+- early degradation detection  
+
+- governance tier escalation  
+
+- anomaly monitoring  
+
+- enterprise risk visibility  
+
+- survivability-focused operations  
+
+---
+
+# Core Capabilities
+
+<div align="center">
+
+| Capability | Description |
+
+|-----------|-------------|
+
+| Stability Modeling | Composite AI health scoring |
+
+| Governance Engine | Stable / Warning / Critical tiers |
+
+| Multi-Agent Design | Coordinated operational agents |
+
+| Enterprise Ready | Testing, docs, maintainability |
+
+| Reproducible Research | Paper + data + notebooks |
+
+| Extensible | Ready for future integrations |
+
+</div>
+
+
+
+# Architecture
+
+
+<p align="center">
+
+  <img width="1672" height="941" alt="bac3f29b-c93f-41b4-9cc8-541a07bd57e7" src="https://github.com/user-attachments/assets/e778fef6-d7f5-4d8e-a81c-78cbb82cc901" />
+
+</p>
+
+
+```text id="urd002"
+
+Telemetry Inputs
+
+      ↓
+
+Monitoring Agent
+
+      ↓
+
+Stability Agent
+
+      ↓
+
+Governance Agent
+
+      ↓
+
+Response Agent
+
+      ↓
+
+Human Oversight
+```
 ---
 # ADSI Formula
 ```math id="r1"
@@ -68,11 +161,16 @@ ADSI ∈ [0,1]
 
 # Stability Tiers
 ```
-ADSI Score  | Tier	| Meaning
-≥ 0.85 |Stable	| Healthy operations
-0.75–0.85 |	Warning	| Monitor closely
-0.65–0.75 |	Degrading	| Intervention advised
-< 0.65	| Critical	| Immediate mitigation
+Score | Tier | Operational Meaning
+
+≥ 0.85 | 🟢 Stable | Normal operations
+
+0.75–0.85 | 🟡 Warning | Watch closely
+
+0.65–0.75 | 🟠 Degrading | Investigate now
+
+< 0.65 | 🔴 Critical | Immediate mitigation
+
 ```
 
 ## Example Usage
