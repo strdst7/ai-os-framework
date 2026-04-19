@@ -53,7 +53,7 @@ Built for production thinking:
 # ADSI Formula
 ```math id="r1"
 ADSI = (AHI + IHI + DHI) / 3
-
+```
 Where:
 
 * AHI = Alignment Health Index
@@ -64,20 +64,19 @@ Bounded range:
 
 ADSI ∈ [0,1]
 
-⸻
 
-Stability Tiers
+# Stability Tiers
+```
+ADSI Score  | Tier	| Meaning
+≥ 0.85 |Stable	| Healthy operations
+0.75–0.85 |	Warning	| Monitor closely
+0.65–0.75 |	Degrading	| Intervention advised
+< 0.65	| Critical	| Immediate mitigation
+```
 
-ADSI Score	Tier	Meaning
-≥ 0.85	Stable	Healthy operations
-0.75–0.85	Warning	Monitor closely
-0.65–0.75	Degrading	Intervention advised
-< 0.65	Critical	Immediate mitigation
+## Example Usage
 
-⸻
-
-Example Usage
-
+```python
 from src.framework import evaluate
 result = evaluate(
     ahi=0.91,
@@ -85,35 +84,39 @@ result = evaluate(
     dhi=0.82
 )
 print(result)
+```
 
 Output:
-
+```python
 {
   "score": 0.867,
   "tier": "Stable"
 }
+```
 
-⸻
+# Quick Start
 
-Quick Start
+## Clone Repository
 
-Clone Repository
-
+```bash
 git clone https://github.com/strdst7/ai-os-framework.git
+
 cd ai-os-framework
+```
 
-Install Dependencies
+## Install Dependencies
 
+```bash
 pip install -r requirements.txt
+```
+## Run Tests
 
-Run Tests
-
+```bash
 pytest
+```
 
-⸻
-
-Repository Structure
-
+# Repository Structure
+```plain text
 ai-os-framework/
 ├── README.md
 ├── PAPER.md
@@ -123,10 +126,9 @@ ai-os-framework/
 ├── tests/
 ├── notebooks/
 └── data/
+```
 
-⸻
-
-Included Documentation
+# Included Documentation
 
 Inside /docs
 
@@ -136,10 +138,9 @@ Inside /docs
 * roadmap.md
 * deployment.md
 * support.md
+  
 
-⸻
-
-Why This Project Matters
+# Why This Project Matters
 
 AI is moving into critical business workflows.
 
@@ -154,70 +155,64 @@ They need systems that can:
 
 AI-OS Framework is a blueprint for that future.
 
-⸻
 
-Current Version
+## Current Version
 
+```plain text
 v1.0.0
+```
+# Roadmap
 
-⸻
-
-Roadmap
-
-v1.1
+## v1.1
 
 * configurable subsystem weights
 * dashboard package
 * richer telemetry ingestion
 
-v1.2
+## v1.2
 
 * alert integrations
 * advanced anomaly layer
 * enterprise reporting
 
-v2.0
+## v2.0
 
 * predictive survivability engine
 * autonomous remediation agents
 * distributed control plane
 
-⸻
 
-Citation
+# Citation
 
+```plain text
 AI-OS Framework: Formal Stability Modeling for Enterprise AI Systems
 Nur Amirah Mohd Kamil (2026)
+```
 
-⸻
-
-Contributing
+# Contributing
 
 Contributions, ideas, and architecture discussions are welcome.
 
 Please open an issue or pull request.
 
-⸻
 
-License
+# License
 
-MIT License
+## MIT License
 
-⸻
 
-Author
+# Author
 
-Nur Amirah Mohd Kamil
+## Nur Amirah Mohd Kamil
 AI Engineer | Multi-Agent Systems | Production Reliability Engineering
 
-⸻
 
-Links
+# Links
 
-Research Repository
+## Research Repository
 
 https://github.com/strdst7/ai-os-framework
 
-Production Implementation
+# Production Implementation
 
 https://github.com/strdst7/ai-os
