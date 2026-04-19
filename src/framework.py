@@ -1,9 +1,23 @@
-from src.scoring import compute_adsi
-from src.tiers import classify_tier
+from src.agents import MonitoringAgent, StabilityAgent, GovernanceAgent
 
 def evaluate(ahi, ihi, dhi):
-    score = compute_adsi(ahi, ihi, dhi)
-    tier = classify_tier(score)
+    monitor = MonitoringAgent()
+    stability = StabilityAgent()
+    governance = GovernanceAgent()
+
+    telemetry = monitor.observe({
+        "ahi": ahi,
+        "ihi": ihi,
+        "dhi": dhi
+    })
+
+    score = stability.evaluate(
+        telemetry["ahi"],
+        telemetry["ihi"],
+        telemetry["dhi"]
+    )
+
+    tier = governance.decide(score)
 
     return {
         "score": score,
