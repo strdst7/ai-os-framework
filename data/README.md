@@ -8,3 +8,8 @@ Files:
 
 - sample_telemetry.csv
 - synthetic_incidents.csv
+
+import pandas as pd
+
+df = pd.read_csv("data/sample_telemetry.csv")
+print(df.head())
