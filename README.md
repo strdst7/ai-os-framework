@@ -5,7 +5,8 @@ AI-OS Framework transforms fragmented monitoring signals into a bounded composit
 # AI Deployment Stability Index (ADSI)
 This enables organizations to detect degradation earlier, reduce operational risk, and build survivability-focused AI infrastructure.
 ---
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/43c6b8da-943f-493e-9a73-55240b62a534" />
+<img width="1536" height="1024" alt="hero" src="https://github.com/user-attachments/assets/4e2c3d96-38d7-44e9-b3fc-14fa28a97dd7" />
+
 
 ---
 # Why AI-OS Framework Exists
