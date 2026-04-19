@@ -1,5 +1,0 @@
-incident_id,type,severity,detection_time
-1,latency_spike,medium,32
-2,retrieval_decay,high,27
-3,kpi_drop,high,24
-4,compound_failure,critical,18
