@@ -9,4 +9,6 @@ class ResponseAgent:
             "Critical": "Escalate and mitigate"
         }
 
-        return {"action": actions[tier]}
+        return {
+            "action": actions.get(tier, "Unknown")
+        }
