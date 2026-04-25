@@ -11,11 +11,6 @@ AI-OS converts fragmented telemetry into a measurable survivability score called
 ✅ Multi-Agent Architecture  
 ✅ Research-backed Scoring Model  
 ✅ Production Reliability Focused
-
-
-#### From Observability to Survivability
-
-![AI-OS Hero Banner](https://github.com/user-attachments/assets/4e2c3d96-38d7-44e9-b3fc-14fa28a97dd7)
 <br>
 ![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11-blue)
 ![License](https://img.shields.io/badge/license-MIT-black)
@@ -27,6 +22,10 @@ AI-OS converts fragmented telemetry into a measurable survivability score called
 ![Workflow](https://img.shields.io/badge/orchestration-graph-success)
 ![Stateful](https://img.shields.io/badge/state-managed-orange)
 <br>
+
+#### From Observability to Survivability
+
+![AI-OS Hero Banner](https://github.com/user-attachments/assets/4e2c3d96-38d7-44e9-b3fc-14fa28a97dd7)
 
 **AI Deployment Stability Index (ADSI)** • **Multi-Agent Systems** • **Production Reliability**
 <br>
