@@ -282,5 +282,3 @@ https://github.com/strdst7/ai-os-framework
 
 https://github.com/strdst7/ai-os
 =======
-pytest -v
->>>>>>> 603b155 (Update README and fix agent imports)
