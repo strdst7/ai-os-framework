@@ -1,12 +1,13 @@
-class ResponseAgent:
-    name = "Response Agent"
+from src.tools import send_alert, rollback_model
 
-    def run(self, tier):
-        actions = {
-            "Stable": "Continue operations",
-            "Warning": "Increase monitoring",
-            "Degrading": "Investigate immediately",
-            "Critical": "Escalate and mitigate"
-        }
+def response_agent(state):
+    if state.tier == "Critical":
+        state.action = rollback_model()
 
-        return {"action": actions[tier]}
+    elif state.tier == "Degrading":
+        state.action = send_alert("Investigate degradation")
+
+    else:
+        state.action = "Continue"
+
+    return state
