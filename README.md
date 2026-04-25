@@ -39,6 +39,19 @@
 
 ---
 
+```markdown id="acp014"
+## Multi-Agent Design
+
+AI-OS demonstrates specialized cooperative agents:
+
+- Monitoring Agent
+- Stability Agent
+- Governance Agent
+- Response Agent
+- Oversight Agent
+
+```
+
 # Why This Project Exists
 
 Most AI systems fail gradually — not instantly.
