@@ -37,9 +37,11 @@
 
 ---
 
-```markdown id="acp014"
+
+
 ## Multi-Agent Design
 
+```
 AI-OS demonstrates specialized cooperative agents:
 
 - Monitoring Agent
