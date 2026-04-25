@@ -1,0 +1,5 @@
+def send_alert(message):
+    return f"ALERT: {message}"
+
+def retry_service():
+    return "Retry triggered"
