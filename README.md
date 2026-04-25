@@ -4,9 +4,7 @@
 
 ## From Observability to Survivability
 
-### A Research-Grade Framework for Enterprise AI Stability Governance
-
-<p align="center">
+### AI-OS Framework: Multi-Agent Governance for Enterprise AI
 
 <img width="1536" height="1024" alt="hero" src="https://github.com/user-attachments/assets/4e2c3d96-38d7-44e9-b3fc-14fa28a97dd7" />
 
