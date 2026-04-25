@@ -4,7 +4,6 @@ from src.agents.governance_agent import GovernanceAgent
 from src.agents.response_agent import ResponseAgent
 from src.agents.oversight_agent import OversightAgent
 
-
 def run_system():
     telemetry = {
         "ahi": 0.72,
@@ -20,13 +19,11 @@ def run_system():
 
     monitor.run(telemetry)
 
-    result = stability.run(
+    score = stability.run(
         telemetry["ahi"],
         telemetry["ihi"],
         telemetry["dhi"]
-    )
-
-    score = result["adsi"]
+    )["adsi"]
 
     tier = governance.run(score)["tier"]
     action = response.run(tier)["action"]
@@ -38,7 +35,6 @@ def run_system():
         "action": action,
         "approval_required": approval
     }
-
 
 if __name__ == "__main__":
     print(run_system())
