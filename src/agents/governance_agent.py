@@ -11,4 +11,6 @@ class GovernanceAgent:
         else:
             tier = "Critical"
 
-        return {"tier": tier}
+        return {
+            "tier": tier
+        }
