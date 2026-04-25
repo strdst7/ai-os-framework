@@ -1,8 +1,5 @@
-class StabilityAgent:
-    name = "Stability Agent"
-
-    def run(self, ahi, ihi, dhi):
-        score = round((ahi + ihi + dhi) / 3, 3)
-        return {
-            "adsi": score
-        }
+def stability_agent(state):
+    state.score = round(
+        (state.ahi + state.ihi + state.dhi) / 3, 3
+    )
+    return state
