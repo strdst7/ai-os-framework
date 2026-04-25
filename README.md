@@ -1,200 +1,136 @@
 <div align="center">
-
+  
 # AI-OS Framework
 
-## Multi-Agent Governance For Enterprise AI Reliability
+### Multi-Agent Governance for Enterprise AI Reliability
 
-### From Observability to Survivability
+#### From Observability to Survivability
 
-<img width="1536" height="1024" alt="hero" src="https://github.com/user-attachments/assets/4e2c3d96-38d7-44e9-b3fc-14fa28a97dd7" />
-
-</p>
-
-
+![AI-OS Hero Banner](https://github.com/user-attachments/assets/4e2c3d96-38d7-44e9-b3fc-14fa28a97dd7)
+<br>
 ![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11-blue)
-
 ![License](https://img.shields.io/badge/license-MIT-black)
-
 ![Status](https://img.shields.io/badge/status-active-success)
-
 ![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen)
-
-
-### AI Deployment Stability Index (ADSI) • Multi-Agent Governance • Production Reliability
-
-
-[Quick Start](#quick-start) •
-
-[Architecture](#architecture) •
-
-[Results](#results) •
-
-[Roadmap](#roadmap) •
-
-[Paper](PAPER.md)
-
-</div>
-
----
-
-
-
-## Multi-Agent Design
-
-```
-AI-OS demonstrates specialized cooperative agents:
-
-- Monitoring Agent
-- Stability Agent
-- Governance Agent
-- Response Agent
-- Oversight Agent
-
-```
-## Agent Orchestration Engine
-
-AI-OS uses graph-style state transitions where specialized agents update shared system state through sequential governance workflows.
-
-![Agents](https://img.shields.io/badge/architecture-multi--agent-blue)
+<br>
+![Architecture](https://img.shields.io/badge/architecture-multi--agent-blue)
 ![Workflow](https://img.shields.io/badge/orchestration-graph-success)
 ![Stateful](https://img.shields.io/badge/state-managed-orange)
+<br>
+
+**AI Deployment Stability Index (ADSI)** • **Multi-Agent Systems** • **Production Reliability**
+<br>
+[Quick Start](#quick-start) •
+[Architecture](#architecture) •
+[ADSI Model](#adsi-model) •
+[Roadmap](#roadmap) •
+[Paper](PAPER.md)
+</div>
+
 
 # Why This Project Exists
 
-Most AI systems fail gradually — not instantly.
-
-They degrade through:
+Most AI systems do not fail instantly.
+They degrade gradually through:
 
 - rising latency  
-
 - retrieval quality decay  
-
 - hallucination drift  
-
 - KPI misalignment  
-
 - infrastructure instability  
+- compounding weak signals
 
-- compounding weak signals  
-
-Traditional dashboards expose metrics but often fail to answer:
-
-> Is the AI deployment still stable?
-
+  
+Traditional dashboards expose metrics, but they often fail to answer the most important operational question:
+> **Is the AI deployment still stable?**
 AI-OS Framework was built to solve that problem.
-
+It introduces a survivability-focused governance layer that converts fragmented telemetry into actionable deployment intelligence.
 ---
-
 # What AI-OS Does
-
-AI-OS converts fragmented operational telemetry into a bounded survivability score:
-
+AI-OS transforms operational signals into a bounded system health score called:
 # AI Deployment Stability Index (ADSI)
-
-This enables:
-
-- early degradation detection  
-
-- governance tier escalation  
-
-- anomaly monitoring  
-
-- enterprise risk visibility  
-
-- survivability-focused operations  
-
+This enables organizations to:
+- detect degradation earlier  
+- classify deployment risk  
+- escalate governance workflows  
+- improve enterprise visibility  
+- preserve human oversight  
+- strengthen production reliability  
 ---
-
 # Core Capabilities
-
-<div align="center">
-
 | Capability | Description |
-
 |-----------|-------------|
-
 | Stability Modeling | Composite AI health scoring |
-
-| Governance Engine | Stable / Warning / Critical tiers |
-
-| Multi-Agent Design | Coordinated operational agents |
-
-| Enterprise Ready | Testing, docs, maintainability |
-
-| Reproducible Research | Paper + data + notebooks |
-
-| Extensible | Ready for future integrations |
-
-</div>
-
-
+| Governance Engine | Stable / Warning / Degrading / Critical tiers |
+| Multi-Agent Design | Specialized cooperative agents |
+| Enterprise Ready | Testing, documentation, maintainability |
+| Reproducible Research | Paper, notebooks, datasets |
+| Extensible | Ready for integrations and upgrades |
+---
+# Multi-Agent Design
+AI-OS uses specialized agents with clear responsibilities.
+| Agent | Responsibility |
+|------|----------------|
+| Monitoring Agent | Watches telemetry and anomalies |
+| Stability Agent | Computes ADSI score |
+| Governance Agent | Applies thresholds and escalation logic |
+| Response Agent | Executes mitigation workflows |
+| Human Oversight Agent | Approves critical decisions |
+---
 
 # Architecture
 
+<div align="center">
+  
+![AI-OS Architecture](https://github.com/user-attachments/assets/e778fef6-d7f5-4d8e-a81c-78cbb82cc901)
+</div>
 
-<p align="center">
-
-  <img width="1672" height="941" alt="bac3f29b-c93f-41b4-9cc8-541a07bd57e7" src="https://github.com/user-attachments/assets/e778fef6-d7f5-4d8e-a81c-78cbb82cc901" />
-
-</p>
-
-
-```text id="urd002"
-
+```text
 Telemetry Inputs
-
       ↓
-
 Monitoring Agent
-
       ↓
-
 Stability Agent
-
       ↓
-
 Governance Agent
-
       ↓
-
 Response Agent
-
       ↓
-
 Human Oversight
 ```
----
-# ADSI Formula
-```math id="r1"
+⸻
+
+ADSI Model
+
+The core scoring model:
+
 ADSI = (AHI + IHI + DHI) / 3
-```
+
 Where:
 
 * AHI = Alignment Health Index
 * IHI = Infrastructure / Retrieval Health Index
 * DHI = Drift Health Index
 
-Bounded range:
+Bounded Range:
 
 ADSI ∈ [0,1]
 
+* 1.0 = highly stable
+* 0.0 = critical failure risk
 
-# Stability Tiers
-```
-Score | Tier | Operational Meaning
 
-≥ 0.85 | 🟢 Stable | Normal operations
-
-0.75–0.85 | 🟡 Warning | Watch closely
-
-0.65–0.75 | 🟠 Degrading | Investigate now
-
-< 0.65 | 🔴 Critical | Immediate mitigation
+Stability Tiers
 
 ```
+Score | 	Tier |	Meaning
+≥ 0.85 |	🟢 Stable |	Normal operations
+0.75 – 0.84	| 🟡 Warning | Increase monitoring |
+0.65 – 0.74 |	🟠 Degrading |Investigate immediately
+< 0.65 |	🔴 Critical	| Immediate mitigation |
+```
 
-## Example Usage
-
+Example Usage
 ```python
 from src.framework import evaluate
 result = evaluate(
@@ -203,9 +139,10 @@ result = evaluate(
     dhi=0.82
 )
 print(result)
-```
 
+```
 Output:
+
 ```python
 {
   "score": 0.867,
@@ -213,13 +150,12 @@ Output:
 }
 ```
 
-# Quick Start
+### Quick Start
 
 ## Clone Repository
 
 ```bash
 git clone https://github.com/strdst7/ai-os-framework.git
-
 cd ai-os-framework
 ```
 
@@ -228,13 +164,15 @@ cd ai-os-framework
 ```bash
 pip install -r requirements.txt
 ```
+
 ## Run Tests
 
 ```bash
 pytest
 ```
 
-# Repository Structure
+## Repository Structure
+
 ```plain text
 ai-os-framework/
 ├── README.md
@@ -246,93 +184,99 @@ ai-os-framework/
 ├── notebooks/
 └── data/
 ```
-
-# Included Documentation
+### Included Documentation
 
 Inside /docs
 
 * architecture.md
 * methodology.md
 * assumptions.md
-* roadmap.md
-* deployment.md
+* maintenance.md
 * support.md
-  
+* next_steps.md
 
-# Why This Project Matters
 
-AI is moving into critical business workflows.
+## Why This Project Matters
 
-That means organizations need more than dashboards.
+AI is moving into mission-critical business workflows.
+
+Organizations need more than dashboards.
 
 They need systems that can:
 
 * detect instability early
 * quantify operational risk
 * guide intervention decisions
-* improve deployment reliability
+* preserve accountability
+* improve deployment resilience
 
 AI-OS Framework is a blueprint for that future.
 
 
-## Current Version
+### Current Version
 
 ```plain text
 v1.0.0
 ```
-# Roadmap
 
-## v1.1
+
+## Roadmap
+
+v1.1
 
 * configurable subsystem weights
 * dashboard package
 * richer telemetry ingestion
 
-## v1.2
+v1.2
 
 * alert integrations
 * advanced anomaly layer
 * enterprise reporting
 
-## v2.0
+v2.0
 
 * predictive survivability engine
 * autonomous remediation agents
 * distributed control plane
 
 
+## Research Paper
+
+Full methodology, experiments, assumptions, and framework design:
+
+📄 Read PAPER.md￼
+
 # Citation
 
-```plain text
+```bash
 AI-OS Framework: Formal Stability Modeling for Enterprise AI Systems
 Nur Amirah Mohd Kamil (2026)
 ```
 
-# Contributing
+## Contributing
 
-Contributions, ideas, and architecture discussions are welcome.
+Contributions, ideas, and pull requests are welcome.
 
-Please open an issue or pull request.
+Please open an issue to discuss improvements.
 
 
-# License
+## License
 
 ## MIT License
 
+## Author
 
-# Author
-
-## Nur Amirah Mohd Kamil
-AI Engineer | Multi-Agent Systems | Production Reliability Engineering
+### Nur Amirah Mohd Kamil
+AI Engineer • Multi-Agent Systems • Production Reliability Engineering
 
 
-# Links
+## Links
 
-## Research Repository
+### Framework Repository
 
 https://github.com/strdst7/ai-os-framework
 
-# Production Implementation
+### Production Implementation
 
 https://github.com/strdst7/ai-os
-
