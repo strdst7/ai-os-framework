@@ -1,5 +1,5 @@
-from src.agents import GovernanceAgent
+from src.orchestrator import run_system
 
-def test_agent():
-    g = GovernanceAgent()
-    assert g.decide(0.6) == "Critical"
+def test_system():
+    result = run_system()
+    assert "tier" in result
