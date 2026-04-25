@@ -51,6 +51,13 @@ AI-OS demonstrates specialized cooperative agents:
 - Oversight Agent
 
 ```
+## Agent Orchestration Engine
+
+AI-OS uses graph-style state transitions where specialized agents update shared system state through sequential governance workflows.
+
+![Agents](https://img.shields.io/badge/architecture-multi--agent-blue)
+![Workflow](https://img.shields.io/badge/orchestration-graph-success)
+![Stateful](https://img.shields.io/badge/state-managed-orange)
 
 # Why This Project Exists
 
