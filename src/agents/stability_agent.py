@@ -1,4 +1,4 @@
-class StabilityAgent:
+class Stability Agent:
     name = "Stability Agent"
 
     def run(self, ahi, ihi, dhi):
