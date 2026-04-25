@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
   
 # AI-OS Framework
@@ -280,3 +281,6 @@ https://github.com/strdst7/ai-os-framework
 ### Production Implementation
 
 https://github.com/strdst7/ai-os
+=======
+pytest -v
+>>>>>>> 603b155 (Update README and fix agent imports)
