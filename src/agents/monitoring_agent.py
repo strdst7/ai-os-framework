@@ -1,2 +1,8 @@
-def monitoring_agent(state):
-    return state
+class MonitoringAgent:
+    name = "Monitoring Agent"
+
+    def run(self, telemetry):
+        return {
+            "status": "observed",
+            "telemetry": telemetry
+        }
