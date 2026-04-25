@@ -13,8 +13,6 @@ AI-OS converts fragmented telemetry into a measurable survivability score called
 ✅ Production Reliability Focused
 
 
-### Multi-Agent Governance for Enterprise AI Reliability
-
 #### From Observability to Survivability
 
 ![AI-OS Hero Banner](https://github.com/user-attachments/assets/4e2c3d96-38d7-44e9-b3fc-14fa28a97dd7)
