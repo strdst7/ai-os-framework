@@ -13,6 +13,7 @@
 ![License](https://img.shields.io/badge/license-MIT-black)
 ![Status](https://img.shields.io/badge/status-active-success)
 ![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen)
+![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
 <br>
 ![Architecture](https://img.shields.io/badge/architecture-multi--agent-blue)
 ![Workflow](https://img.shields.io/badge/orchestration-graph-success)
